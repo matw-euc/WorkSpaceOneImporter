@@ -29,7 +29,7 @@ from datetime import datetime, timedelta
 
 import requests  # dependency
 import json
-import macsesh
+# import macsesh
 import re
 
 from autopkglib import Processor, ProcessorError, get_pref
@@ -337,7 +337,7 @@ class WorkSpaceOneImporter(Processor):
 
         # Init the MacSesh so we can use the trusted certs in macOS Keychains to verify SSL.
         # Needed especially in networks with local proxy and custom certificates.
-        macsesh.inject_into_requests()
+        # macsesh.inject_into_requests()
 
         # take care of headers for authorization
         if self.is_url(oauth_token_url) and oauth_client_id and oauth_client_secret:
